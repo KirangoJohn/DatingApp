@@ -1,14 +1,15 @@
-import { NgFor } from '@angular/common';
+import { NgFor, TitleCasePipe } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavComponent } from "./nav/nav.component";
 import { AccountService } from './_services/account.service';
 import { HomeComponent } from "./home/home.component";
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgFor, NavComponent, HomeComponent],
+  imports: [RouterOutlet, NgFor, NavComponent, HomeComponent, TitleCasePipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
